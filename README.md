@@ -21,9 +21,9 @@ Use "gosh [command] --help" for more information about a command.
 ## subcommands
 
 ### gosh ascii
-```
+```bash
 Convert Unicode text to ASCII characters
-$ echo 'Îñtérnåtîönàlïsātìõń is $(AWESOME)!!' | gosh ascii
+> echo 'Îñtérnåtîönàlïsātìõń is $(AWESOME)!!' | gosh ascii
 Internationalisation is $(AWESOME)!!
 
 Usage:
@@ -35,7 +35,7 @@ Flags:
 
 ### gosh microtime
 
-```
+```bash
 returns time as an integer or as a float
 > gosh microtime
 1672080617
@@ -50,9 +50,9 @@ Flags:
 ```
 
 ### gosh slug
-```
+```bash
 Convert Unicode text into a slug
-$ echo 'Îñtérnåtîönàlïsātìõń is $(AWESOME)!!' | bin/gosh-mac slug
+> echo 'Îñtérnåtîönàlïsātìõń is $(AWESOME)!!' | bin/gosh-mac slug
 internationalisation-is-awesome
 
 Usage:
