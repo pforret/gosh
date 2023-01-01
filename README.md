@@ -53,7 +53,7 @@ Flags:
 ```
 Convert Unicode text into a slug
 $ echo 'Îñtérnåtîönàlïsātìõń is $(AWESOME)!!' | bin/gosh-mac slug
-Internationalisation-is-AWESOME
+internationalisation-is-awesome
 
 Usage:
   gosh slug [flags]
