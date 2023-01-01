@@ -24,8 +24,6 @@ package cmd
 import (
 	"fmt"
     "time"
-    "flag"
-
 	"github.com/spf13/cobra"
 )
 
@@ -34,20 +32,20 @@ var microtimeCmd = &cobra.Command{
 	Use:   "microtime",
 	Short: "return time in 'epoch' style (seconds since 1 Jan 1970)",
 	Long: `returns time as an integer or as a float
-> microtime
+> gosh microtime
 1672080617
-> microtime true
+> gosh microtime true
 1672080617.458
 `,
     Args: cobra.MaximumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
         loc, _ := time.LoadLocation("UTC")
         now := time.Now().In(loc)
-        if len(flag.Args()) <= 1 {
+        if len(args) <= 0 {
             // microtime -- without arguments
             fmt.Printf("%d\n",now.Unix())
         }
-        if len(flag.Args()) >= 2 {
+        if len(args) >= 1 {
             // microtime true -or- microtime 1
             microSeconds := float64(now.Nanosecond()) / 1000000000
             fmt.Printf("%.6f\n",float64(now.Unix()) + microSeconds)

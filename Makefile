@@ -2,7 +2,6 @@ BINARY_NAME=gosh
 BINARY_DIR=bin
 
 build:
-	go build -o ${BINARY_DIR}/${BINARY_NAME} main.go
 	GOARCH=amd64 GOOS=darwin go build -o ${BINARY_DIR}/${BINARY_NAME}-mac main.go
 	GOARCH=amd64 GOOS=linux  go build -o ${BINARY_DIR}/${BINARY_NAME}-linux main.go
 	GOARCH=amd64 GOOS=windows go build -o ${BINARY_DIR}/${BINARY_NAME}-win main.go
